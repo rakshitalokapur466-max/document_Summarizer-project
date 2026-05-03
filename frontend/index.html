@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Summarizer - Smart Text & Document Summarization</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- html2pdf for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Document Summarizer</h1>
+            <p>Transform documents into concise AI-powered summaries</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('text')">📝 Text Input</button>
+            <button class="tab-btn" onclick="switchTab('file')">📁 File Upload</button>
+        </div>
+
+        <!-- Text Input Tab -->
+        <div id="textTab" class="tab-content active">
+            <textarea id="textInput" placeholder="Paste your text here (minimum 30 characters)..."></textarea>
+            <div class="char-counter">
+                <span id="charCount">0</span> characters
+            </div>
+        </div>
+
+        <!-- File Upload Tab -->
+        <div id="fileTab" class="tab-content">
+            <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                <div class="upload-icon">📄</div>
+                <p>Click or drag to upload</p>
+                <small>Supported: TXT, PDF, DOCX (Max 50MB)</small>
+            </div>
+            <input type="file" id="fileInput" accept=".txt,.pdf,.docx" style="display: none">
+            <div id="fileInfo" class="file-info" style="display: none;"></div>
+        </div>
+
+        <!-- Action Buttons -->
+        <button id="summarizeBtn" onclick="summarize()">✨ Generate Summary</button>
+        <button class="clear-btn" onclick="clearAll()">🗑️ Clear All</button>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>🤖 AI is analyzing your document...</p>
+            <small>This may take 10-30 seconds depending on file size</small>
+        </div>
+
+        <!-- Output Section -->
+        <div class="output-section">
+            <h3>📋 Summary</h3>
+            <div id="output" class="output">
+                <p class="placeholder">Your summary will appear here</p>
+            </div>
+            
+            <!-- Export Options -->
+            <div class="export-options" style="display: none;" id="exportOptions">
+                <h4>📥 Export Summary As:</h4>
+                <div class="summary-actions">
+                    <button class="action-btn copy-btn" onclick="copySummary()">📋 Copy</button>
+                    <button class="action-btn txt-btn" onclick="downloadAsTXT()">📄 TXT</button>
+                    <button class="action-btn pdf-btn" onclick="downloadAsPDF()">📑 PDF</button>
+                    <button class="action-btn docx-btn" onclick="downloadAsDOCX()">📘 DOCX</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error" class="error" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project specific
+backend/venv/
+backend/__pycache__/
+*.log
+*.db
+.DS_Store
+
+# Model files (too large for GitHub)
+*.bin
+*.pth
+*.pt
+*.h5
+*.keras
+t5-small-model/
+
+# Temporary files
+temp/
+uploads/
+*.tmp
