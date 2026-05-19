@@ -2,8 +2,4 @@ flask
 flask-cors
 transformers
 torch
-psutil
-PyPDF2
-python-docx
-werkzeug
 gunicorn
