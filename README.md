@@ -44,8 +44,8 @@ An intelligent document summarization tool that uses AI to automatically generat
 
 ```bash
 # Clone the repository
-git clone https://github.com/rakshitalokapur466-max/document_Summarizer_project.git
-cd document_Summarizer project
+git clone https://github.com/rakshitalokapur466-max/Smart_Summary_generator.git
+cd Smart_Summary_Generator project
 
 # Create virtual environment
 python -m venv venv
