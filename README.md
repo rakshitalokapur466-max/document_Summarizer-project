@@ -1,4 +1,4 @@
-# 🤖 AI Document Summarizer
+# 🤖 Smart Summary Generator
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-2.3+-green.svg)](https://flask.palletsprojects.com)
